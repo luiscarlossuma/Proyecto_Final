@@ -1,0 +1,58 @@
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+{% load static %}
+<style>
+    .logo {
+        width: 310px;
+    }
+</style>
+<html>
+    <head>
+        {% bootstrap_css %}
+    </head>
+    <body>
+        <header>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="#"><img class="logo" src="{% static 'imagenes/Logo.png' %}" alt="Logo de la secretaria de ecologia"></a>
+
+
+                <!--boton de alternancia-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--contenido del menu colapsable-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <!--lista de elementos del menu-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">REGISTRARSE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">CREAR REPORTE</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">LOG OUT </a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">LOG IN </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        {% bootstrap_javascript %}
+    </body>
+</html>
