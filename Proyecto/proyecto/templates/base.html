@@ -1,20 +1,18 @@
 {% load bootstrap4 %}
 {% load widget_tweaks %}
 {% load static %}
-<style>
-    .logo {
-        width: 310px;
-    }
-</style>
+
 <html>
     <head>
         {% bootstrap_css %}
     </head>
     <body>
         <header>
+            <!-- CSS Custom File -->
+            <link href="{% static 'css/base.css' %}" rel="stylesheet">
             <!--navbar-->
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <a class="navbar-brand" href="#"><img class="logo" src="{% static 'imagenes/Logo.png' %}" alt="Logo de la secretaria de ecologia"></a>
+            <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand" href="#"><img class="logo" src="{% static 'imagenes/Header.png' %}" alt="Logo de la secretaria de ecologia"></a>
 
 
                 <!--boton de alternancia-->
