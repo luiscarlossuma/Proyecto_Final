@@ -5,6 +5,9 @@ from django.shortcuts import render, redirect
 from .models import Reportes
 from .forms import ReporteForm
 
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 def index(request):
 
     return HttpResponse("Este es el proyecto de la secretaria de ecologia")
@@ -31,6 +34,7 @@ class Crear(View):
             form.save()
             return redirect('crear')
         return render(request, self.template_name, {'form': form})
+    @method_decorator(login_required)
 
     def get(self, request):
         form = ReporteForm()

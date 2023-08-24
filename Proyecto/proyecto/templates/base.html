@@ -28,18 +28,18 @@
                             <a class="nav-link" href="{% url 'inicio' %}">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'inicio' %}">REGISTRARSE</a>
+                            <a class="nav-link" href="{% url 'registrarse' %}">REGISTRARSE</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'crear' %}">CREAR REPORTE</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'inicio' %}">LOG OUT </a>
+                            <a class="nav-link" href="{% url 'logout' %}">LOG OUT </a>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'inicio' %}">LOG IN </a>
+                            <a class="nav-link" href="{% url 'login' %}">LOG IN </a>
                         </li>
                         {% endif %}
                     </ul>
