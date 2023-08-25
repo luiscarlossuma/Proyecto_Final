@@ -4,14 +4,14 @@
 {% load bootstrap4 %}
 {% load widget_tweaks %}
 <!DOCTYPE html>
-  <body>
+  <body id="crear">
     <!-- encabezado -->
     <div class="titulo" align="center">
       <h1>Crea tu reporte</h1>
     </div>
     <!-- contenido -->
     <div align="center">
-      <div style="width: 70%;">
+      <div style="width: 50%;">
         <!--formulario-->
         <br>
         <br>
@@ -29,7 +29,7 @@
             <label for="{{ form.detalles.id_for_label }}">Detalles</label>
             {{ form.detalles|add_class:"form-control" }}
           </div>
-          <button class="btn btn-primary" type="submit">Guardar</button>
+          <button type="submit" id="boton">Guardar</button>
         </form>
       </div>
     </div>

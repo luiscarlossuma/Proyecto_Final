@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block content %}
+<body id="registrarse">
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Registrarse</button>
+        <button type="submit" id="boton">Registrarse</button>
     </form>
+</body>
 {% endblock %}

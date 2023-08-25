@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
+*{
+    font-family:'Montserrat', sans-serif;
+    font-size: 14px;
+}
+/* base */
 .logo {
     width: 310px;
 }
@@ -15,12 +19,69 @@
 .navbar-nav {
     gap: 30px;
 }
-a {
+.nav-link {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    font-weight: bold;
 }
-a:hover {
+.nav-link:hover {
     color: #f9ae00;
     transition: .1s ease-in-out;
 }
+
+/* inicio */
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-40%);
+}
+
+/* registrarse */
+
+#registrarse{
+    background-image: url("/static/imagenes/grass.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0;
+    z-index: -100;
+}
+
+/* crear reporte */
+
+#crear{
+    background-image: url("/static/imagenes/log.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0;
+    z-index: -100;
+}
+
+/*login*/
+
+#login{
+    background-image: url("/static/imagenes/meadow.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0;
+    z-index: -100;
+}
+
+/* botones */
+#boton {
+    background-image: linear-gradient(to bottom, #F9AE00 0%, #F9AE00 25%, #F59700 33%, #F59700 75%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    border-color: #EA5B11;
+  }
+
